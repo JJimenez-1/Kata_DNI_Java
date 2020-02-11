@@ -3,11 +3,20 @@ package edu.elsmancs.dni;
 public class DNI {
 
     private final String dni;
+    private Boolean numeroSano = false;
+    private int NumDividir = 23;
 
     public DNI(String dni) {
         this.dni = dni;
     }
-    public String getDni(){
+
+    public String getDni() {
         return this.dni;
+    }
+
+    public String getLetter() {
+        int number = Integer.parseInt(getDni())/NumDividir;
+        return number;
+        if
     }
 }
