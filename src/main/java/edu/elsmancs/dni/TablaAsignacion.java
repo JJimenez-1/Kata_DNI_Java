@@ -11,12 +11,20 @@ public class TablaAsignacion {
     char calcularLetra(String DNI){
         int dni = Integer.parseInt(DNI);
         int posicion = dni % getModulo();
-        return getLetter
+        return getLetter(posicion);
     }
-    /**
-    char getLetter(int posicion)
+    char getLetter(int posicion) throws ArrayIndexOutOfBoundsException {
+        try{
+            return this.abecedario[posicion];
+        }
+        catch(ArrayIndexOutOfBoundsException exception){
+            throw new ArrayIndexOutOfBoundsException(
+                    "La posicion esta fuera de los limites de la tabla de asignacion"
+            );
+        }
+    }
+
     private int getModulo(){
         return this.abecedario.length;
     }
-     */
 }
