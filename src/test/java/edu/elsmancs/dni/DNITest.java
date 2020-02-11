@@ -9,10 +9,7 @@ public class DNITest {
     @Test
     public void checkLengthNumDni() {
         DNI dni = new DNI("01817200Q");
-        assertEquals(9, dni.getDni().length());
+        assertTrue(dni.checkDniLength());
         System.out.println(dni);
     }
-
-
-
 }
