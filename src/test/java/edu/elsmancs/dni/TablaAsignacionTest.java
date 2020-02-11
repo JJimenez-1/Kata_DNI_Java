@@ -4,10 +4,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
-public class TablaAsigncacionTest {
+
+
+public class TablaAsignacionTest {
 
     private static TablaAsignacion tabla;
-    private static final char[] letrasNoPermitidas = {'I', 'Ñ', 'O', 'U'};
 
    @BeforeClass
    public static void crearTabla(){

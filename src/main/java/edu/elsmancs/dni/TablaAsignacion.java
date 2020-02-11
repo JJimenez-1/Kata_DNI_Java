@@ -24,6 +24,7 @@ public class TablaAsignacion {
         }
     }
 
+
     private int getModulo(){
         return this.tabla.length;
     }
