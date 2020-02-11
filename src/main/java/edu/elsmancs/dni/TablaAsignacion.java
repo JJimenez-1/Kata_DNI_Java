@@ -13,6 +13,7 @@ public class TablaAsignacion {
         int posicion = dni % getModulo();
         return getLetter(posicion);
     }
+
     char getLetter(int posicion) throws ArrayIndexOutOfBoundsException {
         try{
             return this.tabla[posicion];

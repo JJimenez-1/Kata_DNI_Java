@@ -4,6 +4,7 @@ public class DNI {
 
     private final String dni;
     private final byte Longitud_DNI = 9;
+    private TablaAsignacion tabla = new TablaAsignacion();
 
     public DNI(String dni) {
         this.dni = dni;
@@ -17,6 +18,11 @@ public class DNI {
     public String toString() {
         return getDni();
     }
+
+    private TablaAsignacion getTablaAsignacion(){
+        return this.tabla;
+    }
+
 
     public Boolean checkDniLength() {
         return getDni().length() == Longitud_DNI;

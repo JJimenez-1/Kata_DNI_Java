@@ -12,4 +12,12 @@ public class DNITest {
         assertTrue(dni.checkDniLength());
         System.out.println(dni);
     }
+    /**
+    @Test
+    public void checkNumeroCorrecto() {
+        DNI dni = new DNI("40135330P");
+        asserTrue(dni.checkNumeroCorrecto());
+    }
+    */
+
 }

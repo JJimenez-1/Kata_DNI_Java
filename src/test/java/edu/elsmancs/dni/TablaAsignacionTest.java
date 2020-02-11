@@ -26,4 +26,9 @@ public class TablaAsignacionTest {
        tabla.getLetter(100);
    }
 
+   @Test
+    public void getLetraCorrecta(){
+       DNI dni = new DNI("40135330");
+       assertEquals("40135330P", "40135330" + tabla.calcularLetra("40135330"));
+   }
 }
