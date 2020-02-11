@@ -18,6 +18,11 @@ public class TablaAsigncacionTest {
        assertEquals('T', tabla.getLetter(0));
        assertEquals('X', tabla.getLetter(10));
        assertEquals('E', tabla.getLetter(22));
-
    }
+
+   @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void getLetraFueraTablaAsignacion(){
+       tabla.getLetter(100);
+   }
+
 }
