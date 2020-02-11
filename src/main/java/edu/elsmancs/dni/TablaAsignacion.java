@@ -1,7 +1,7 @@
 package edu.elsmancs.dni;
 
 public class TablaAsignacion {
-    private final char[] abecedario = {'T', 'R', 'W', 'A', 'G', 'M',
+    private final char[] tabla = {'T', 'R', 'W', 'A', 'G', 'M',
             'Y', 'F', 'P', 'D', 'X', 'B',
             'N', 'J', 'Z', 'S', 'Q', 'V',
             'H', 'L', 'C', 'K', 'E'};
@@ -15,7 +15,7 @@ public class TablaAsignacion {
     }
     char getLetter(int posicion) throws ArrayIndexOutOfBoundsException {
         try{
-            return this.abecedario[posicion];
+            return this.tabla[posicion];
         }
         catch(ArrayIndexOutOfBoundsException exception){
             throw new ArrayIndexOutOfBoundsException(
@@ -25,6 +25,7 @@ public class TablaAsignacion {
     }
 
     private int getModulo(){
-        return this.abecedario.length;
+        return this.tabla.length;
     }
+
 }

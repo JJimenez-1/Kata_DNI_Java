@@ -14,10 +14,6 @@ public class DNITest {
         System.out.println(dni);
     }
 
-    @Test
-    public void checkNumeroDni(){
-        DNI dni = new DNI("01817200");
-        assertEquals("q", getLetterDni);
-    }
+
 
 }

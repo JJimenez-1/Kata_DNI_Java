@@ -13,9 +13,11 @@ public class TablaAsigncacionTest {
    public static void crearTabla(){
        tabla = new TablaAsignacion();
    }
-
    @Test
-    public void getLetraTableAsgnicacion() {
-       assertEquals('T', tabla.getLetra(0));
+    public void getLetraTablaAsgnacion() {
+       assertEquals('T', tabla.getLetter(0));
+       assertEquals('X', tabla.getLetter(10));
+       assertEquals('E', tabla.getLetter(22));
+
    }
 }

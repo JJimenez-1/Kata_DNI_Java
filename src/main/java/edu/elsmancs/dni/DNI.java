@@ -13,10 +13,4 @@ public class DNI {
     public String getDni() {
         return this.dni;
     }
-
-    public String getLetter() {
-        int number = Integer.parseInt(getDni())/NumDividir;
-        return number;
-        if
-    }
 }
