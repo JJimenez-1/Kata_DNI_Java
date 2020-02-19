@@ -43,4 +43,10 @@ public class dniTest {
         dni dni = new dni("95447129G");
         assertEquals("G", Character.toString(dni.extraerParteAlfabeticaDni()));
     }
+
+    @Test
+    public void isDniNumeroTest() {
+        dni dni = new dni("36669249G");
+        assertFalse(dni.isDniNumero("36669249G"));
+    }
 }

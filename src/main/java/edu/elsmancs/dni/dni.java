@@ -62,4 +62,17 @@ public class dni {
     Character extraerParteAlfabeticaDni() {
         return dni.charAt(dni.length() - 1);
     }
+
+    public Boolean checkNumeroDni() {
+        setDniCifSano(checkDniLength() && isDniNumero(extraerParteNumericaDni()));
+        return isNumeroSano();
+    }
+    Boolean isDniNumero(String cadena) {
+        for (int i = 0; i < cadena.length(); i++) {
+            if (!Character.isDigit(cadena.charAt(i))) {
+                return false;
+            }
+        } return true;
+    }
+
 }
