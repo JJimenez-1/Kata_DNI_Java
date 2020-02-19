@@ -26,7 +26,7 @@ public class TablaAsignacion {
     }
 
 
-    private int getModulo(){
+    int getModulo(){
         return this.tabla.length;
     }
 
