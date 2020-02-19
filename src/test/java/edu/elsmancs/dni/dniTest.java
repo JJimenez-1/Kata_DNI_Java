@@ -23,6 +23,14 @@ public class dniTest {
         dni dni = new dni("01817200Q");
         assertTrue(dni.checkDniLength());
     }
+
+    @Test
+    public void dniNoSanoTest() {
+        dni dni = new dni("01817200Q");
+        assertFalse(dni.isDniCifSano());
+        assertFalse(dni.isLetraSana());
+        assertFalse(dni.isNumeroSano());
+    }
     /**
     @Test
     public void
