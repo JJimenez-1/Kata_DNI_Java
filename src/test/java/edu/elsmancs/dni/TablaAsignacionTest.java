@@ -40,7 +40,7 @@ public class TablaAsignacionTest {
 
    @Test
     public void getLetraCorrecta(){
-       dni dni = new dni("40135330");
+       Dni dni = new Dni("40135330");
        assertEquals("40135330P", "40135330" + tabla.calcularLetra("40135330"));
    }
 

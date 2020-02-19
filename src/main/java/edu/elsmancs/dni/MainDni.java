@@ -3,11 +3,9 @@ package edu.elsmancs.dni;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-/**
-import dni.Dni;
-*/
+
 public class MainDni {
-/**
+
     public static void main(String[] args) {
 
         int numeroCasos = 25;
@@ -18,7 +16,7 @@ public class MainDni {
          * Este kata es para practicar manejo
          * de la clase String de Java
          */
-/**
+
         List<String> casosTest = new ArrayList<>();
 
         for (int i = 1; i <= numeroCasos; i++) {
@@ -43,7 +41,7 @@ public class MainDni {
         /**
          * Manejo de la interfaz publica de la clase Dni
          */
-/**
+
         System.out.println("\n ***** Casos Test aleatorios ***** \n");
 
         Dni objetoDni = null;
@@ -72,7 +70,7 @@ public class MainDni {
         /**
          * Casos test correctos
          */
-/**
+
         String[] casosTestPass = { //casos OK
                 "78484464T","72376173A","01817200Q","95882054E","63587725Q",
                 "26861694V","21616083Q","26868974Y","40135330P","89044648X",
@@ -104,5 +102,4 @@ public class MainDni {
             }
         }
     }
- */
 }

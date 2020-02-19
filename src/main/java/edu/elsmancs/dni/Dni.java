@@ -1,6 +1,6 @@
 package edu.elsmancs.dni;
 
-public class dni {
+public class Dni {
 
     private final String dni;
     private Boolean numeroSano = false;
@@ -9,7 +9,7 @@ public class dni {
     private final byte Longitud_DNI = 9;
     private TablaAsignacion tabla = new TablaAsignacion();
 
-    public dni(String dni) {
+    public Dni(String dni) {
         this.dni = dni;
     }
 
