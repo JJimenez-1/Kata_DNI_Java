@@ -25,14 +25,22 @@ public class dniTest {
     }
 
     @Test
-    public void dniNoSanoTest() {
+    public void isDniTest() {
         dni dni = new dni("01817200Q");
         assertFalse(dni.isDniCifSano());
         assertFalse(dni.isLetraSana());
         assertFalse(dni.isNumeroSano());
     }
-    /**
+
     @Test
-    public void
-    */
+    public void extrarNumeroDniTest() {
+        dni dni = new dni("95447129G");
+        assertEquals("95447129", dni.extraerParteNumericaDni());
+    }
+
+    @Test
+    public void extrarLetraDniTest() {
+        dni dni = new dni("95447129G");
+        assertEquals("G", Character.toString(dni.extraerParteAlfabeticaDni()));
+    }
 }

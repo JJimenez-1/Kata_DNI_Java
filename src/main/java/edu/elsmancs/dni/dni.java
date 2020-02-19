@@ -35,7 +35,7 @@ public class dni {
         return numeroSano;
     }
 
-    public void setNumeroSano(Boolean numeroSano) {
+    private void setNumeroSano(Boolean numeroSano) {
         this.numeroSano = numeroSano;
     }
 
@@ -43,7 +43,7 @@ public class dni {
         return letraSana;
     }
 
-    public void setLetraSana(Boolean letraSana) {
+    private void setLetraSana(Boolean letraSana) {
         this.letraSana = letraSana;
     }
 
@@ -51,7 +51,15 @@ public class dni {
         return dniCifSano;
     }
 
-    public void setDniCifSano(Boolean dniCifSano) {
+    private void setDniCifSano(Boolean dniCifSano) {
         this.dniCifSano = dniCifSano;
+    }
+
+    String extraerParteNumericaDni() {
+        return (String) dni.substring(0, dni.length()- 1);
+    }
+
+    Character extraerParteAlfabeticaDni() {
+        return dni.charAt(dni.length() - 1);
     }
 }
