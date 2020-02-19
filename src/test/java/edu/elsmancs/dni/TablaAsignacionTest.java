@@ -44,4 +44,16 @@ public class TablaAsignacionTest {
        assertEquals("40135330P", "40135330" + tabla.calcularLetra("40135330"));
    }
 
+   @Test
+    public void letraPermitidaTest() {
+        char letra = 'A';
+        assertTrue(tabla.letraPermitida(letra));
+    }
+
+    @Test
+    public void letraNoPermitidaTest() {
+        char letra = 'Ñ';
+        assertFalse(tabla.letraPermitida(letra));
+    }
+
 }
