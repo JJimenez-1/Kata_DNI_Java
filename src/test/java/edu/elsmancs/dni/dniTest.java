@@ -49,4 +49,18 @@ public class dniTest {
         dni dni = new dni("36669249G");
         assertFalse(dni.isDniNumero("36669249G"));
     }
+
+    @Test
+    public void checkNumeroDniTest() {
+        dni dni = new dni ("56604086M");
+        dni dni2 = new dni("83246188D");
+        assertFalse(dni.checkNumeroDni());
+        assertFalse(dni2.checkNumeroDni());
+    }
+
+    @Test
+    public void obtenerLetra() {
+        dni dni = new dni("83526188D");
+        assertEquals("D",Character.toString(dni.obtenerLetra()));
+    }
 }

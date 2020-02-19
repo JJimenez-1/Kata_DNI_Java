@@ -35,24 +35,24 @@ public class dni {
         return numeroSano;
     }
 
-    private void setNumeroSano(Boolean numeroSano) {
-        this.numeroSano = numeroSano;
+    private void setNumeroSano(Boolean valor) {
+        this.numeroSano = valor;
     }
 
     public Boolean isLetraSana() {
         return letraSana;
     }
 
-    private void setLetraSana(Boolean letraSana) {
-        this.letraSana = letraSana;
+    private void setLetraSana(Boolean valor) {
+        this.letraSana = valor;
     }
 
     public Boolean isDniCifSano() {
         return dniCifSano;
     }
 
-    private void setDniCifSano(Boolean dniCifSano) {
-        this.dniCifSano = dniCifSano;
+    private void setDniCifSano(Boolean valor) {
+        this.dniCifSano = valor;
     }
 
     String extraerParteNumericaDni() {
@@ -63,9 +63,24 @@ public class dni {
         return dni.charAt(dni.length() - 1);
     }
 
+    public Boolean checkDni() {
+        setDniCifSano(checkNumeroDni() && checkLetra());
+        return isDniCifSano();
+    }
     public Boolean checkNumeroDni() {
         setDniCifSano(checkDniLength() && isDniNumero(extraerParteNumericaDni()));
         return isNumeroSano();
+    }
+
+    public Boolean checkLetra() {
+        checkNumeroDni();
+        if(isNumeroSano()) {
+            setLetraSana(Character.isUpperCase(extraerParteAlfabeticaDni())
+                    && checkLetraValida());
+            return isLetraSana();
+        } else {
+            return false;
+        }
     }
     Boolean isDniNumero(String cadena) {
         for (int i = 0; i < cadena.length(); i++) {
@@ -75,4 +90,16 @@ public class dni {
         } return true;
     }
 
+    public Character obtenerLetra() {
+        checkNumeroDni();
+        if (isNumeroSano()) {
+            return getTablaAsignacion().calcularLetra(extraerParteNumericaDni());
+        } else {
+            return Character.MIN_VALUE;
+        }
+    }
+
+    private Boolean checkLetraValida() {
+        return extraerParteAlfabeticaDni() == obtenerLetra();
+    }
 }
