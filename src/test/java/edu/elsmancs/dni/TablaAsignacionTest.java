@@ -14,11 +14,18 @@ public class TablaAsignacionTest {
    public static void crearTabla(){
        tabla = new TablaAsignacion();
    }
+
    @Test
     public void getLetraTablaAsgnacion() {
        assertEquals('T', tabla.getLetter(0));
        assertEquals('X', tabla.getLetter(10));
        assertEquals('E', tabla.getLetter(22));
+   }
+
+   @Test
+   public void calcularLetraTest() {
+       String dni = new String("67875808");
+       assertEquals("W", Character.toString(tabla.calcularLetra(dni)));
    }
 
    @Test(expected = ArrayIndexOutOfBoundsException.class)
@@ -31,4 +38,5 @@ public class TablaAsignacionTest {
        dni dni = new dni("40135330");
        assertEquals("40135330P", "40135330" + tabla.calcularLetra("40135330"));
    }
+
 }

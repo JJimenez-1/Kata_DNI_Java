@@ -29,4 +29,9 @@ public class TablaAsignacion {
     private int getModulo(){
         return this.tabla.length;
     }
+
+    Boolean letraPermitida(char letra) {
+        String tablaString = String.valueOf(tabla);
+        return tablaString.contains(Character.toString(letra));
+    }
 }
